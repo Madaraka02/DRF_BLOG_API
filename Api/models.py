@@ -16,5 +16,6 @@ class Comment(models.Model):
     content = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_published = models.DateTimeField(auto_now_add=True, null=True)
 class PostImages(models.Model):
     pass

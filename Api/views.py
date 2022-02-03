@@ -11,3 +11,6 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     # permission_classes = [IsAccountAdminOrReadOnly]
 
+class CommentViewSet(viewsets.ModelViewSet):
+    serializer_class = CommentSerializer
+    queryset = Comment.objects.all()
